@@ -3,7 +3,9 @@
 # Purpose: To search the release notes for known bugs through keywords
 
 
-#This version has the core functionality completed. Need to add support for the transform class of the missing versions.
+#This version has the core functionality completed. 
+# To Do:
+# Need to add support for the transform class of the missing versions.
 #If no bugs are found, display a message saying so.
 #Test and add error handling.
 
