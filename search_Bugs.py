@@ -72,10 +72,11 @@ class transform:
         for x in range(0, len(values), 4):
             bug_list = list()
             for i in range(x, x+4):
-                left_cleaned = values[i].replace("<p>", "")
-                right_cleaned = left_cleaned.replace("</p>", "")
-                space_cleaned = right_cleaned.replace("\r\n", "")
-                spaces_cleaned = ' '.join(space_cleaned.split())
+                val = values[i]
+                for ch in ["<p>", "</p>", "\r\n"]:
+                    if ch in val:
+                        val = val.replace(ch,"")
+                spaces_cleaned = ' '.join(val.split())
                 bug_list.append(spaces_cleaned)
             bug_dict = {columns[i]: bug_list[i] for i in range(len(columns))}
             cleaned_values.append(bug_dict)
@@ -97,20 +98,17 @@ class transform:
         for x in range(0, len(values), 4):
             bug_list = list()
             for i in range(x, x+4):
-                left_cleaned = values[i].replace("Body1\">", "")
-                left_cleaned = left_cleaned.replace("Body2\">", "")
-                left_cleaned = left_cleaned.replace("<td class=\"TableStyle-FortinetTable-BodyE-Column1-", "")
-                left_cleaned = left_cleaned.replace("<td class=\"TableStyle-FortinetTable-BodyB-Column1-", "")
-                right_cleaned = left_cleaned.replace("</td>", "")
-                space_cleaned = right_cleaned.replace("\r\n", "")
-                spaces_cleaned = ' '.join(space_cleaned.split())
+                val = values[i]
+                for ch in ["Body1\">", "Body2\">", "<td class=\"TableStyle-FortinetTable-BodyE-Column1-", "<td class=\"TableStyle-FortinetTable-BodyB-Column1-", "</td>", "\r\n"]:
+                    if ch in val:
+                        val = val.replace(ch,"")
+                spaces_cleaned = ' '.join(val.split())
                 bug_list.append(spaces_cleaned)
             bug_dict = {columns[i]: bug_list[i] for i in range(len(columns))}
             cleaned_values.append(bug_dict)
         final_values = { version : cleaned_values}
         return final_values
 
-    
     #This searches the cache file, and returns found bugs.
     @staticmethod
     def get_bugs(data, keyword, version):
@@ -150,8 +148,6 @@ while True:
     versions_list = list(urls.keys())
     version_index = versions_list.index(version)
     relevant_versions = versions_list[0:version_index+1]
-
-    
 
     #cache file already exists
     if os.path.exists("cache.txt") == True:

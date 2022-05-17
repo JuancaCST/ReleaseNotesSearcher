@@ -1,4 +1,560 @@
 {
+    "6.1.1": [
+        {
+            "Bug ID": "664708",
+            "Severity": "Major",
+            "Module": "App Server",
+            "Description": "All Super Global users can see all Incidents for all Organizations, regardless of their role restrictions."
+        },
+        {
+            "Bug ID": "655557",
+            "Severity": "Major",
+            "Module": "Query",
+            "Description": "Real time Query results not shown if there is no overlap between Event workers and Query workers."
+        },
+        {
+            "Bug ID": "665994",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "Selecting a incident category first in search panel will cause aggregation count of other criteria to be blank."
+        },
+        {
+            "Bug ID": "665387",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "Analytics filter operator IN / NOT IN doesn't work for individual CMDB selections."
+        },
+        {
+            "Bug ID": "664245",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "Incident comments filled with debug messages when running CVE Integration."
+        },
+        {
+            "Bug ID": "659678",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "Geo Maps do not show location on Dashboard map widget."
+        },
+        {
+            "Bug ID": "653426",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "Dashboard using Google API does not work for Org if the Org user does not have read permission of Google key (in Admin)."
+        },
+        {
+            "Bug ID": "651528",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "FortiSIEM CMDB to ServiceNow Duplicates."
+        },
+        {
+            "Bug ID": "660734",
+            "Severity": "Minor",
+            "Module": "Device Support",
+            "Description": "Aruba Parser parses causes high CPU because of excessive use of regular expression."
+        },
+        {
+            "Bug ID": "659163",
+            "Severity": "Minor",
+            "Module": "Device Support",
+            "Description": "Fortigate on AWS logs are not recognized in FortiSIEM because of new devices."
+        },
+        {
+            "Bug ID": "652184",
+            "Severity": "Minor",
+            "Module": "Device Support",
+            "Description": "Update Unix Parser with a new time stamp format."
+        },
+        {
+            "Bug ID": "652182",
+            "Severity": "Minor",
+            "Module": "Device Support",
+            "Description": "Update F5BigIP Parser Update for Unsupported (New/Custom) Syslog Header."
+        },
+        {
+            "Bug ID": "649906",
+            "Severity": "Minor",
+            "Module": "Device Support",
+            "Description": "CentOS CROND events incorrectly parsed as McAfee-WebGw-Run-Cmd because logs are too similar."
+        },
+        {
+            "Bug ID": "647216",
+            "Severity": "Minor",
+            "Module": "Device Support",
+            "Description": "Not all attributes for Windows Security Events 4754, 4759, 4749 are parsed."
+        },
+        {
+            "Bug ID": "640196",
+            "Severity": "Minor",
+            "Module": "Device Support",
+            "Description": "Not all attributes for Windows Security Event Parsing for Event ID 4625 is incorrect."
+        },
+        {
+            "Bug ID": "634374",
+            "Severity": "Minor",
+            "Module": "Device Support",
+            "Description": "Windows Security Event ID 4688 is not parsed fully."
+        },
+        {
+            "Bug ID": "634372",
+            "Severity": "Minor",
+            "Module": "Device Support",
+            "Description": "Windows Sysmon Parser needs to be extended."
+        },
+        {
+            "Bug ID": "607339",
+            "Severity": "Minor",
+            "Module": "Device Support",
+            "Description": "Sysmon PowerShell Commands not correctly parsed if .exe is called from within Powershell."
+        },
+        {
+            "Bug ID": "594078",
+            "Severity": "Minor",
+            "Module": "Device Support",
+            "Description": "Rule \"Windows Audit Log Cleared\" does not include user as an incident attribute."
+        },
+        {
+            "Bug ID": "592946",
+            "Severity": "Minor",
+            "Module": "Device Support",
+            "Description": "Set Windows Event ID, Category, Subcategory and Login failure reason as description in Windows Security logs."
+        },
+        {
+            "Bug ID": "659018",
+            "Severity": "Minor",
+            "Module": "Elastic Search",
+            "Description": "Many phDataManager errors may occur in some situations, caused by FortiSIEM sending malformed JSON to Elastocsearch."
+        },
+        {
+            "Bug ID": "662556",
+            "Severity": "Minor",
+            "Module": "Event Pulling",
+            "Description": "AWS CloudTrailParser.xml parses event time incorrectly, which can cause event collection delay."
+        },
+        {
+            "Bug ID": "662540",
+            "Severity": "Minor",
+            "Module": "Event Pulling",
+            "Description": "Azure CLI: mLastPollTime is not updated when job failed, causing data collection errors."
+        },
+        {
+            "Bug ID": "662450,<br>661806,<br>655562",
+            "Severity": "Minor",
+            "Module": "Event Pulling",
+            "Description": "Azure Event Hub event collection errors can cause data collection to stop after running for some time."
+        },
+        {
+            "Bug ID": "660938",
+            "Severity": "Minor",
+            "Module": "Event Pulling",
+            "Description": "Guard Duty max count event sometimes does not get picked up."
+        },
+        {
+            "Bug ID": "654551",
+            "Severity": "Minor",
+            "Module": "Event Pulling",
+            "Description": "AgentManager can consume memory after running for a while, causing process to stop functioning."
+        },
+        {
+            "Bug ID": "656337",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "Analytics tab - Trend Bar Graph does not show continuity with time and results."
+        },
+        {
+            "Bug ID": "663683,<br>638773",
+            "Severity": "Minor",
+            "Module": "Integration",
+            "Description": "Alienvault STIX OTX Integration may not work for pulling IOCs."
+        },
+        {
+            "Bug ID": "662899",
+            "Severity": "Minor",
+            "Module": "Parser",
+            "Description": "Parser function for resolving Hostname to IP address does not work correctly."
+        },
+        {
+            "Bug ID": "659180",
+            "Severity": "Minor",
+            "Module": "Parser",
+            "Description": "Collector caches time stamp when rejected from Appserver from Check-in."
+        },
+        {
+            "Bug ID": "659171",
+            "Severity": "Minor",
+            "Module": "Parser",
+            "Description": "Two events attributes exist with same name Total Connections."
+        },
+        {
+            "Bug ID": "598471",
+            "Severity": "Minor",
+            "Module": "Parser",
+            "Description": "Parse MITRE mapping event attributes in Windows Sysmon events."
+        },
+        {
+            "Bug ID": "516477",
+            "Severity": "Enhancement",
+            "Module": "App Server",
+            "Description": "Cannot Discover Multiple Devices through Multiple Collectors through API."
+        },
+        {
+            "Bug ID": "665694",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "The list of public DNS Servers need to be updated."
+        },
+        {
+            "Bug ID": "530467",
+            "Severity": "Enhancement",
+            "Module": "Device Support",
+            "Description": "FortiSIEM not detecting certain event SSH/Audit events using UnixParser."
+        },
+        {
+            "Bug ID": "521230",
+            "Severity": "Enhancement",
+            "Module": "Device Support",
+            "Description": "Need to support Barracuda F Series Log."
+        },
+        {
+            "Bug ID": "661711",
+            "Severity": "Enhancement",
+            "Module": "Event Pulling",
+            "Description": "Parse out SQS log of when Cloudtrail package is logged."
+        },
+        {
+            "Bug ID": "544522",
+            "Severity": "Enhancement",
+            "Module": "GUI",
+            "Description": "Cannot delete many credentials at one time."
+        }
+    ],
+    "6.1.0": [
+        {
+            "Bug ID": "644410",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "Widget Dashboard Imported in Super Global is not shared in organizations."
+        },
+        {
+            "Bug ID": "644090",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "Custom Event Attribute names do not display in CSV reports."
+        },
+        {
+            "Bug ID": "643967",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "Handle the Null pointer exception in App Server to Query Master communication."
+        },
+        {
+            "Bug ID": "643648",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "Query time interval is not saved properly in Report Bundle scheduled for organizations."
+        },
+        {
+            "Bug ID": "643249",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "An exception occurs during app server start up while loading namedValue to Redis."
+        },
+        {
+            "Bug ID": "640569",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "After upgrade, Shared dashboards created in Super Global are invisible if su to organizations."
+        },
+        {
+            "Bug ID": "637264",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "Failed to save location for device when city/state has a single quote (after it already triggered an incident)."
+        },
+        {
+            "Bug ID": "635420",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "Device hostnames containing a single quote cause incident insert errors."
+        },
+        {
+            "Bug ID": "527733",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "LDAP user discovery merge is logging excessive user contact update."
+        },
+        {
+            "Bug ID": "497314",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "LDAP OU discovery is aborted because of long OU name."
+        },
+        {
+            "Bug ID": "647601",
+            "Severity": "Minor",
+            "Module": "Data",
+            "Description": "\"System License Warning: Max Number of Devices Exceeded License\" rule does not trigger."
+        },
+        {
+            "Bug ID": "644155",
+            "Severity": "Minor",
+            "Module": "Data",
+            "Description": "Some attributes are not correctly parsed by NetBotzCMCTrap."
+        },
+        {
+            "Bug ID": "641317",
+            "Severity": "Minor",
+            "Module": "Event Pulling",
+            "Description": "Logon Events are not pulling from Google App Suite."
+        },
+        {
+            "Bug ID": "649152",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "Home Setting does not show on UI after an upgrade."
+        },
+        {
+            "Bug ID": "648413",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "winexe is enabled in Discovery once you edit a Discovery template."
+        },
+        {
+            "Bug ID": "647769",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "You can select any attribute in a rule exception. It should only allow those attributes in \"Incident attribute\"."
+        },
+        {
+            "Bug ID": "644073",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "New schedule for FortiGuard IOC Service does not show the created schedule after saving."
+        },
+        {
+            "Bug ID": "643888",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "Losing the connection to Super during a Dashboard slideshow causes a user log out after 10 minutes."
+        },
+        {
+            "Bug ID": "640894",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "Pull Events tab shows an error from another organization."
+        },
+        {
+            "Bug ID": "638148",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "The GUI displays 0xA0 characters in Raw events as 0x20."
+        },
+        {
+            "Bug ID": "633235",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "GUI Error occurs when saving Access Method configuration for FortiGate Rest API."
+        },
+        {
+            "Bug ID": "632413",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "During GUI login, DOMAIN is not displayed until the Log On button is pressed."
+        },
+        {
+            "Bug ID": "612331",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "Dashboard Slideshow times out after 1 day."
+        },
+        {
+            "Bug ID": "611930",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "Generating two reports that attempt to show average and max value only shows max."
+        },
+        {
+            "Bug ID": "602326",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "CMDB Reports with Report Type generate a PSQLException."
+        },
+        {
+            "Bug ID": "598485",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "Parser Validation cannot handle parsers with an \"&amp;\" symbol."
+        },
+        {
+            "Bug ID": "639744",
+            "Severity": "Minor",
+            "Module": "GUI, App Server",
+            "Description": "Login drop down has to convert to text box in order to protect end client from exposure of other domains."
+        },
+        {
+            "Bug ID": "637664",
+            "Severity": "Minor",
+            "Module": "H5_Analytics",
+            "Description": "In Rule Exception, the Value field cannot be edited when values are added from the CMDB."
+        },
+        {
+            "Bug ID": "596560",
+            "Severity": "Minor",
+            "Module": "Parser",
+            "Description": "The character \"&lt;\" in the test event breaks attributes display in Parser testing"
+        },
+        {
+            "Bug ID": "629489",
+            "Severity": "Minor",
+            "Module": "Performance Monitoring",
+            "Description": "Cisco ASA memory utilization polling fails as vendor has changed SNMP OID."
+        },
+        {
+            "Bug ID": "517105",
+            "Severity": "Minor",
+            "Module": "Performance Monitoring",
+            "Description": "Memory utilization on Cisco Nexus 9k is stuck at 100%."
+        },
+        {
+            "Bug ID": "637631",
+            "Severity": "Minor",
+            "Module": "Query Master",
+            "Description": "CSV Export from the date before daylight saving change shows a one hour difference."
+        },
+        {
+            "Bug ID": "648971",
+            "Severity": "Minor",
+            "Module": "System",
+            "Description": "phDataPurger crashes when archiving from Elasticsearch to NFS if the raw event size is more than 64KB."
+        },
+        {
+            "Bug ID": "643027",
+            "Severity": "Minor",
+            "Module": "System",
+            "Description": "FSM collector nodes contain passwords in plain text based on the API cache."
+        },
+        {
+            "Bug ID": "632883",
+            "Severity": "Minor",
+            "Module": "System",
+            "Description": "Elastic Search Disaster Recovery does not sync the Redis Password correctly."
+        },
+        {
+            "Bug ID": "630634",
+            "Severity": "Minor",
+            "Module": "System",
+            "Description": "Elasticsearch snapshot creation fails during disaster recovery."
+        },
+        {
+            "Bug ID": "644882",
+            "Severity": "Enhancement",
+            "Module": "App Server",
+            "Description": "Support device names with single quote."
+        },
+        {
+            "Bug ID": "632976",
+            "Severity": "Enhancement",
+            "Module": "App Server",
+            "Description": "Malware IP download - does not handle CIDR notation."
+        },
+        {
+            "Bug ID": "644104",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Need additional JunOS event types to the data-definition file."
+        },
+        {
+            "Bug ID": "643874",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Watchguard Firewall Parser needs an update."
+        },
+        {
+            "Bug ID": "643780",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Trend Micro Apex Central Parser for Antivirus doesn't create a correct Event Type."
+        },
+        {
+            "Bug ID": "643015",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Sophos Event parser does set the reporting IP or host name."
+        },
+        {
+            "Bug ID": "639125",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Windows WMI events in French are not fully parsed."
+        },
+        {
+            "Bug ID": "637703",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Citrix Netscaler Parser does not parse certain VPN logs."
+        },
+        {
+            "Bug ID": "632767",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Spanish Windows parser needs more translations."
+        },
+        {
+            "Bug ID": "615340",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Citrix Netscaler Parser does not parse out Group Names with a space."
+        },
+        {
+            "Bug ID": "612914",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Infoblox parser - Parser does not pick up client hostname in the syslog field. Instead, it picks up the IP address."
+        },
+        {
+            "Bug ID": "609725",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Windows Custom Log Parser does not parse out two fields for event ID 411: Client IP and Error Message."
+        },
+        {
+            "Bug ID": "603557",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Nessus Parser Host Field must also parse the hostname."
+        },
+        {
+            "Bug ID": "599955",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Windows Event Parsing - Language translation update."
+        },
+        {
+            "Bug ID": "643287",
+            "Severity": "Enhancement",
+            "Module": "GUI",
+            "Description": "Domain part of O365 Endpoints need to be configurable."
+        },
+        {
+            "Bug ID": "641357",
+            "Severity": "Enhancement",
+            "Module": "GUI",
+            "Description": "Country Groups must be editable only from the left tree."
+        },
+        {
+            "Bug ID": "640064",
+            "Severity": "Enhancement",
+            "Module": "GUI",
+            "Description": "Cannot clear multiple incidents under the Incident Explorer dashboard."
+        },
+        {
+            "Bug ID": "612285",
+            "Severity": "Enhancement",
+            "Module": "Parser",
+            "Description": "O365 Event Type MS_OFFICE365_SecurityComplianceCenter_AlertTriggered is missing details."
+        }
+    ],
     "6.5.0": [
         {
             "Bug ID": "781951",
@@ -3065,562 +3621,6 @@
             "Severity": "Enhancement",
             "Module": "System",
             "Description": "Monitor Raid Health should be added for 3500F and 2000F HW appliances."
-        }
-    ],
-    "6.1.1": [
-        {
-            "Bug ID": "664708",
-            "Severity": "Major",
-            "Module": "App Server",
-            "Description": "All Super Global users can see all Incidents for all Organizations, regardless of their role restrictions."
-        },
-        {
-            "Bug ID": "655557",
-            "Severity": "Major",
-            "Module": "Query",
-            "Description": "Real time Query results not shown if there is no overlap between Event workers and Query workers."
-        },
-        {
-            "Bug ID": "665994",
-            "Severity": "Minor",
-            "Module": "App Server",
-            "Description": "Selecting a incident category first in search panel will cause aggregation count of other criteria to be blank."
-        },
-        {
-            "Bug ID": "665387",
-            "Severity": "Minor",
-            "Module": "App Server",
-            "Description": "Analytics filter operator IN / NOT IN doesn't work for individual CMDB selections."
-        },
-        {
-            "Bug ID": "664245",
-            "Severity": "Minor",
-            "Module": "App Server",
-            "Description": "Incident comments filled with debug messages when running CVE Integration."
-        },
-        {
-            "Bug ID": "659678",
-            "Severity": "Minor",
-            "Module": "App Server",
-            "Description": "Geo Maps do not show location on Dashboard map widget."
-        },
-        {
-            "Bug ID": "653426",
-            "Severity": "Minor",
-            "Module": "App Server",
-            "Description": "Dashboard using Google API does not work for Org if the Org user does not have read permission of Google key (in Admin)."
-        },
-        {
-            "Bug ID": "651528",
-            "Severity": "Minor",
-            "Module": "App Server",
-            "Description": "FortiSIEM CMDB to ServiceNow Duplicates."
-        },
-        {
-            "Bug ID": "660734",
-            "Severity": "Minor",
-            "Module": "Device Support",
-            "Description": "Aruba Parser parses causes high CPU because of excessive use of regular expression."
-        },
-        {
-            "Bug ID": "659163",
-            "Severity": "Minor",
-            "Module": "Device Support",
-            "Description": "Fortigate on AWS logs are not recognized in FortiSIEM because of new devices."
-        },
-        {
-            "Bug ID": "652184",
-            "Severity": "Minor",
-            "Module": "Device Support",
-            "Description": "Update Unix Parser with a new time stamp format."
-        },
-        {
-            "Bug ID": "652182",
-            "Severity": "Minor",
-            "Module": "Device Support",
-            "Description": "Update F5BigIP Parser Update for Unsupported (New/Custom) Syslog Header."
-        },
-        {
-            "Bug ID": "649906",
-            "Severity": "Minor",
-            "Module": "Device Support",
-            "Description": "CentOS CROND events incorrectly parsed as McAfee-WebGw-Run-Cmd because logs are too similar."
-        },
-        {
-            "Bug ID": "647216",
-            "Severity": "Minor",
-            "Module": "Device Support",
-            "Description": "Not all attributes for Windows Security Events 4754, 4759, 4749 are parsed."
-        },
-        {
-            "Bug ID": "640196",
-            "Severity": "Minor",
-            "Module": "Device Support",
-            "Description": "Not all attributes for Windows Security Event Parsing for Event ID 4625 is incorrect."
-        },
-        {
-            "Bug ID": "634374",
-            "Severity": "Minor",
-            "Module": "Device Support",
-            "Description": "Windows Security Event ID 4688 is not parsed fully."
-        },
-        {
-            "Bug ID": "634372",
-            "Severity": "Minor",
-            "Module": "Device Support",
-            "Description": "Windows Sysmon Parser needs to be extended."
-        },
-        {
-            "Bug ID": "607339",
-            "Severity": "Minor",
-            "Module": "Device Support",
-            "Description": "Sysmon PowerShell Commands not correctly parsed if .exe is called from within Powershell."
-        },
-        {
-            "Bug ID": "594078",
-            "Severity": "Minor",
-            "Module": "Device Support",
-            "Description": "Rule \"Windows Audit Log Cleared\" does not include user as an incident attribute."
-        },
-        {
-            "Bug ID": "592946",
-            "Severity": "Minor",
-            "Module": "Device Support",
-            "Description": "Set Windows Event ID, Category, Subcategory and Login failure reason as description in Windows Security logs."
-        },
-        {
-            "Bug ID": "659018",
-            "Severity": "Minor",
-            "Module": "Elastic Search",
-            "Description": "Many phDataManager errors may occur in some situations, caused by FortiSIEM sending malformed JSON to Elastocsearch."
-        },
-        {
-            "Bug ID": "662556",
-            "Severity": "Minor",
-            "Module": "Event Pulling",
-            "Description": "AWS CloudTrailParser.xml parses event time incorrectly, which can cause event collection delay."
-        },
-        {
-            "Bug ID": "662540",
-            "Severity": "Minor",
-            "Module": "Event Pulling",
-            "Description": "Azure CLI: mLastPollTime is not updated when job failed, causing data collection errors."
-        },
-        {
-            "Bug ID": "662450,<br>661806,<br>655562",
-            "Severity": "Minor",
-            "Module": "Event Pulling",
-            "Description": "Azure Event Hub event collection errors can cause data collection to stop after running for some time."
-        },
-        {
-            "Bug ID": "660938",
-            "Severity": "Minor",
-            "Module": "Event Pulling",
-            "Description": "Guard Duty max count event sometimes does not get picked up."
-        },
-        {
-            "Bug ID": "654551",
-            "Severity": "Minor",
-            "Module": "Event Pulling",
-            "Description": "AgentManager can consume memory after running for a while, causing process to stop functioning."
-        },
-        {
-            "Bug ID": "656337",
-            "Severity": "Minor",
-            "Module": "GUI",
-            "Description": "Analytics tab - Trend Bar Graph does not show continuity with time and results."
-        },
-        {
-            "Bug ID": "663683,<br>638773",
-            "Severity": "Minor",
-            "Module": "Integration",
-            "Description": "Alienvault STIX OTX Integration may not work for pulling IOCs."
-        },
-        {
-            "Bug ID": "662899",
-            "Severity": "Minor",
-            "Module": "Parser",
-            "Description": "Parser function for resolving Hostname to IP address does not work correctly."
-        },
-        {
-            "Bug ID": "659180",
-            "Severity": "Minor",
-            "Module": "Parser",
-            "Description": "Collector caches time stamp when rejected from Appserver from Check-in."
-        },
-        {
-            "Bug ID": "659171",
-            "Severity": "Minor",
-            "Module": "Parser",
-            "Description": "Two events attributes exist with same name Total Connections."
-        },
-        {
-            "Bug ID": "598471",
-            "Severity": "Minor",
-            "Module": "Parser",
-            "Description": "Parse MITRE mapping event attributes in Windows Sysmon events."
-        },
-        {
-            "Bug ID": "516477",
-            "Severity": "Enhancement",
-            "Module": "App Server",
-            "Description": "Cannot Discover Multiple Devices through Multiple Collectors through API."
-        },
-        {
-            "Bug ID": "665694",
-            "Severity": "Enhancement",
-            "Module": "Data",
-            "Description": "The list of public DNS Servers need to be updated."
-        },
-        {
-            "Bug ID": "530467",
-            "Severity": "Enhancement",
-            "Module": "Device Support",
-            "Description": "FortiSIEM not detecting certain event SSH/Audit events using UnixParser."
-        },
-        {
-            "Bug ID": "521230",
-            "Severity": "Enhancement",
-            "Module": "Device Support",
-            "Description": "Need to support Barracuda F Series Log."
-        },
-        {
-            "Bug ID": "661711",
-            "Severity": "Enhancement",
-            "Module": "Event Pulling",
-            "Description": "Parse out SQS log of when Cloudtrail package is logged."
-        },
-        {
-            "Bug ID": "544522",
-            "Severity": "Enhancement",
-            "Module": "GUI",
-            "Description": "Cannot delete many credentials at one time."
-        }
-    ],
-    "6.1.0": [
-        {
-            "Bug ID": "644410",
-            "Severity": "Minor",
-            "Module": "App Server",
-            "Description": "Widget Dashboard Imported in Super Global is not shared in organizations."
-        },
-        {
-            "Bug ID": "644090",
-            "Severity": "Minor",
-            "Module": "App Server",
-            "Description": "Custom Event Attribute names do not display in CSV reports."
-        },
-        {
-            "Bug ID": "643967",
-            "Severity": "Minor",
-            "Module": "App Server",
-            "Description": "Handle the Null pointer exception in App Server to Query Master communication."
-        },
-        {
-            "Bug ID": "643648",
-            "Severity": "Minor",
-            "Module": "App Server",
-            "Description": "Query time interval is not saved properly in Report Bundle scheduled for organizations."
-        },
-        {
-            "Bug ID": "643249",
-            "Severity": "Minor",
-            "Module": "App Server",
-            "Description": "An exception occurs during app server start up while loading namedValue to Redis."
-        },
-        {
-            "Bug ID": "640569",
-            "Severity": "Minor",
-            "Module": "App Server",
-            "Description": "After upgrade, Shared dashboards created in Super Global are invisible if su to organizations."
-        },
-        {
-            "Bug ID": "637264",
-            "Severity": "Minor",
-            "Module": "App Server",
-            "Description": "Failed to save location for device when city/state has a single quote (after it already triggered an incident)."
-        },
-        {
-            "Bug ID": "635420",
-            "Severity": "Minor",
-            "Module": "App Server",
-            "Description": "Device hostnames containing a single quote cause incident insert errors."
-        },
-        {
-            "Bug ID": "527733",
-            "Severity": "Minor",
-            "Module": "App Server",
-            "Description": "LDAP user discovery merge is logging excessive user contact update."
-        },
-        {
-            "Bug ID": "497314",
-            "Severity": "Minor",
-            "Module": "App Server",
-            "Description": "LDAP OU discovery is aborted because of long OU name."
-        },
-        {
-            "Bug ID": "647601",
-            "Severity": "Minor",
-            "Module": "Data",
-            "Description": "\"System License Warning: Max Number of Devices Exceeded License\" rule does not trigger."
-        },
-        {
-            "Bug ID": "644155",
-            "Severity": "Minor",
-            "Module": "Data",
-            "Description": "Some attributes are not correctly parsed by NetBotzCMCTrap."
-        },
-        {
-            "Bug ID": "641317",
-            "Severity": "Minor",
-            "Module": "Event Pulling",
-            "Description": "Logon Events are not pulling from Google App Suite."
-        },
-        {
-            "Bug ID": "649152",
-            "Severity": "Minor",
-            "Module": "GUI",
-            "Description": "Home Setting does not show on UI after an upgrade."
-        },
-        {
-            "Bug ID": "648413",
-            "Severity": "Minor",
-            "Module": "GUI",
-            "Description": "winexe is enabled in Discovery once you edit a Discovery template."
-        },
-        {
-            "Bug ID": "647769",
-            "Severity": "Minor",
-            "Module": "GUI",
-            "Description": "You can select any attribute in a rule exception. It should only allow those attributes in \"Incident attribute\"."
-        },
-        {
-            "Bug ID": "644073",
-            "Severity": "Minor",
-            "Module": "GUI",
-            "Description": "New schedule for FortiGuard IOC Service does not show the created schedule after saving."
-        },
-        {
-            "Bug ID": "643888",
-            "Severity": "Minor",
-            "Module": "GUI",
-            "Description": "Losing the connection to Super during a Dashboard slideshow causes a user log out after 10 minutes."
-        },
-        {
-            "Bug ID": "640894",
-            "Severity": "Minor",
-            "Module": "GUI",
-            "Description": "Pull Events tab shows an error from another organization."
-        },
-        {
-            "Bug ID": "638148",
-            "Severity": "Minor",
-            "Module": "GUI",
-            "Description": "The GUI displays 0xA0 characters in Raw events as 0x20."
-        },
-        {
-            "Bug ID": "633235",
-            "Severity": "Minor",
-            "Module": "GUI",
-            "Description": "GUI Error occurs when saving Access Method configuration for FortiGate Rest API."
-        },
-        {
-            "Bug ID": "632413",
-            "Severity": "Minor",
-            "Module": "GUI",
-            "Description": "During GUI login, DOMAIN is not displayed until the Log On button is pressed."
-        },
-        {
-            "Bug ID": "612331",
-            "Severity": "Minor",
-            "Module": "GUI",
-            "Description": "Dashboard Slideshow times out after 1 day."
-        },
-        {
-            "Bug ID": "611930",
-            "Severity": "Minor",
-            "Module": "GUI",
-            "Description": "Generating two reports that attempt to show average and max value only shows max."
-        },
-        {
-            "Bug ID": "602326",
-            "Severity": "Minor",
-            "Module": "GUI",
-            "Description": "CMDB Reports with Report Type generate a PSQLException."
-        },
-        {
-            "Bug ID": "598485",
-            "Severity": "Minor",
-            "Module": "GUI",
-            "Description": "Parser Validation cannot handle parsers with an \"&amp;\" symbol."
-        },
-        {
-            "Bug ID": "639744",
-            "Severity": "Minor",
-            "Module": "GUI, App Server",
-            "Description": "Login drop down has to convert to text box in order to protect end client from exposure of other domains."
-        },
-        {
-            "Bug ID": "637664",
-            "Severity": "Minor",
-            "Module": "H5_Analytics",
-            "Description": "In Rule Exception, the Value field cannot be edited when values are added from the CMDB."
-        },
-        {
-            "Bug ID": "596560",
-            "Severity": "Minor",
-            "Module": "Parser",
-            "Description": "The character \"&lt;\" in the test event breaks attributes display in Parser testing"
-        },
-        {
-            "Bug ID": "629489",
-            "Severity": "Minor",
-            "Module": "Performance Monitoring",
-            "Description": "Cisco ASA memory utilization polling fails as vendor has changed SNMP OID."
-        },
-        {
-            "Bug ID": "517105",
-            "Severity": "Minor",
-            "Module": "Performance Monitoring",
-            "Description": "Memory utilization on Cisco Nexus 9k is stuck at 100%."
-        },
-        {
-            "Bug ID": "637631",
-            "Severity": "Minor",
-            "Module": "Query Master",
-            "Description": "CSV Export from the date before daylight saving change shows a one hour difference."
-        },
-        {
-            "Bug ID": "648971",
-            "Severity": "Minor",
-            "Module": "System",
-            "Description": "phDataPurger crashes when archiving from Elasticsearch to NFS if the raw event size is more than 64KB."
-        },
-        {
-            "Bug ID": "643027",
-            "Severity": "Minor",
-            "Module": "System",
-            "Description": "FSM collector nodes contain passwords in plain text based on the API cache."
-        },
-        {
-            "Bug ID": "632883",
-            "Severity": "Minor",
-            "Module": "System",
-            "Description": "Elastic Search Disaster Recovery does not sync the Redis Password correctly."
-        },
-        {
-            "Bug ID": "630634",
-            "Severity": "Minor",
-            "Module": "System",
-            "Description": "Elasticsearch snapshot creation fails during disaster recovery."
-        },
-        {
-            "Bug ID": "644882",
-            "Severity": "Enhancement",
-            "Module": "App Server",
-            "Description": "Support device names with single quote."
-        },
-        {
-            "Bug ID": "632976",
-            "Severity": "Enhancement",
-            "Module": "App Server",
-            "Description": "Malware IP download - does not handle CIDR notation."
-        },
-        {
-            "Bug ID": "644104",
-            "Severity": "Enhancement",
-            "Module": "Data",
-            "Description": "Need additional JunOS event types to the data-definition file."
-        },
-        {
-            "Bug ID": "643874",
-            "Severity": "Enhancement",
-            "Module": "Data",
-            "Description": "Watchguard Firewall Parser needs an update."
-        },
-        {
-            "Bug ID": "643780",
-            "Severity": "Enhancement",
-            "Module": "Data",
-            "Description": "Trend Micro Apex Central Parser for Antivirus doesn't create a correct Event Type."
-        },
-        {
-            "Bug ID": "643015",
-            "Severity": "Enhancement",
-            "Module": "Data",
-            "Description": "Sophos Event parser does set the reporting IP or host name."
-        },
-        {
-            "Bug ID": "639125",
-            "Severity": "Enhancement",
-            "Module": "Data",
-            "Description": "Windows WMI events in French are not fully parsed."
-        },
-        {
-            "Bug ID": "637703",
-            "Severity": "Enhancement",
-            "Module": "Data",
-            "Description": "Citrix Netscaler Parser does not parse certain VPN logs."
-        },
-        {
-            "Bug ID": "632767",
-            "Severity": "Enhancement",
-            "Module": "Data",
-            "Description": "Spanish Windows parser needs more translations."
-        },
-        {
-            "Bug ID": "615340",
-            "Severity": "Enhancement",
-            "Module": "Data",
-            "Description": "Citrix Netscaler Parser does not parse out Group Names with a space."
-        },
-        {
-            "Bug ID": "612914",
-            "Severity": "Enhancement",
-            "Module": "Data",
-            "Description": "Infoblox parser - Parser does not pick up client hostname in the syslog field. Instead, it picks up the IP address."
-        },
-        {
-            "Bug ID": "609725",
-            "Severity": "Enhancement",
-            "Module": "Data",
-            "Description": "Windows Custom Log Parser does not parse out two fields for event ID 411: Client IP and Error Message."
-        },
-        {
-            "Bug ID": "603557",
-            "Severity": "Enhancement",
-            "Module": "Data",
-            "Description": "Nessus Parser Host Field must also parse the hostname."
-        },
-        {
-            "Bug ID": "599955",
-            "Severity": "Enhancement",
-            "Module": "Data",
-            "Description": "Windows Event Parsing - Language translation update."
-        },
-        {
-            "Bug ID": "643287",
-            "Severity": "Enhancement",
-            "Module": "GUI",
-            "Description": "Domain part of O365 Endpoints need to be configurable."
-        },
-        {
-            "Bug ID": "641357",
-            "Severity": "Enhancement",
-            "Module": "GUI",
-            "Description": "Country Groups must be editable only from the left tree."
-        },
-        {
-            "Bug ID": "640064",
-            "Severity": "Enhancement",
-            "Module": "GUI",
-            "Description": "Cannot clear multiple incidents under the Incident Explorer dashboard."
-        },
-        {
-            "Bug ID": "612285",
-            "Severity": "Enhancement",
-            "Module": "Parser",
-            "Description": "O365 Event Type MS_OFFICE365_SecurityComplianceCenter_AlertTriggered is missing details."
         }
     ]
 }
