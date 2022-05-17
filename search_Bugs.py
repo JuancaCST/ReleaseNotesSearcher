@@ -1,6 +1,6 @@
 # Name: Juan Cabrera
 # Date Created: 05/16/2022
-# Purpose: To search the release notes for known bugs through keywords
+# Purpose: To search the release notes for known bugs using keywords
 
 
 import json,re,os
@@ -17,11 +17,8 @@ urls = {
     "6.1.0" : "https://docs.fortinet.com/document/fortisiem/6.1.0/release-notes/441737/whats-new-in-6-1-0#What's_New_in_6.1.0"
 }
 
-
-# Step 1: Fetch the html page, assign to object, and return it
 class extract:
     @staticmethod
-    #Gets html page and returns as a string.
     def get_page(url):
         import urllib.request
         fp = urllib.request.urlopen(url)
@@ -30,14 +27,12 @@ class extract:
         return mystr
 
     @staticmethod
-    #Open cache file and return current dictionary
     def get_cache(data_file):
         with open(data_file) as f:
             data = json.load(f)
         return data
 
     @staticmethod
-    #When version is not in cache file, get html page and clean data,
     def get_data(data, version):
         if version == "6.1.0" or version == "6.1.1":
             html_data = extract.get_page(urls[version])
@@ -52,9 +47,7 @@ class extract:
 
 
 
-# Takes string as input and returns a list
 class transform:
-    #Takes the html str as input and returns a list of the bugs as dictionaries.
     @staticmethod
     def clean_data(data, version):
         index_start = re.search("<p>\d{6}</p>|\">\d{6}</td>", data).start()
@@ -62,18 +55,15 @@ class transform:
         short_data = data[index_start:index_end-1]
         values = re.findall("<p>.*\r\n.*</p>\r\n.*<p><b>Note</b>.*\r\n.*</p>|<p>.*</p>|<p>.*\n.*</p>|<p>.*\n.*\n.*</p>|<p>.*\n.*\n.*\n.*</p>|<p>.*\n.*\n.*\n.*\n.*</p>|AD.Server.</td>\n.*</tr>", short_data)
 
-        #Inserts value manually into the values list due to inconsistent html format from the source - only for version 6.3.1.
         if version == "6.3.1":
             values.insert(3, "<p>In AD User Discovery, the Last Login Value was incorrect if the user was not set (did not log in) to the AD Server.</p>")
-        #print("Length of values", len(values))
-        #print(values)
         cleaned_values = list()
         columns = ["Bug ID", "Severity", "Module", "Description"]
         for x in range(0, len(values), 4):
             bug_list = list()
             for i in range(x, x+4):
                 val = values[i]
-                for ch in ["<p>", "</p>", "\r\n"]:
+                for ch in ["<p>", "</p>", "\r\n", "<code>", "</code>", "&nbsp;", "<b>", "</b>", "&gt;"]:
                     if ch in val:
                         val = val.replace(ch,"")
                 spaces_cleaned = ' '.join(val.split())
@@ -109,7 +99,6 @@ class transform:
         final_values = { version : cleaned_values}
         return final_values
 
-    #This searches the cache file, and returns found bugs.
     @staticmethod
     def get_bugs(data, keyword, version):
         found = list()
@@ -117,21 +106,24 @@ class transform:
             if keyword in str(bug).lower():
                 found.append(bug)
         return found
-    
+
 
 
 class load():
     @staticmethod
-    #This is the class that will write the list of bugs (dictionaries) into the local cache file
     def write_file(parsed_data):
         with open("cache.txt", "w") as json_Cache:
             json_Cache.write(json.dumps(parsed_data, indent=4))
 
     def print_found(results):
+        print("{:<10} {:<15} {:<22} {:<10}".format('Bug ID', 'Severity', 'Module', 'Description'))
+        print("{:<10} {:<15} {:<22} {:<10}".format('------', '--------', '------', '-----------'))
         for bug in results:
-            print(bug)
+            vals = bug.values()
+            list(vals)
+            print ("{:<10} {:<15} {:<22} {:<10}".format(list(vals)[0], list(vals)[1], list(vals)[2], list(vals)[3]))
         print(" ")
-        
+
 
 
 while True:
@@ -139,39 +131,44 @@ while True:
     if keyword.lower() == "quit" or keyword.lower() == "q":
         break
     version = input("Enter the lowest version you would like to include in the search [Please use format 6.x.x] ")
-    if keyword.lower() == "quit" or keyword.lower() == "q":
+    if version.lower() == "quit" or version.lower() == "q":
         break
-    if version not in urls.keys():
-        raise Exception("The version you entered is not valid. Only versions 6.1.0 and higher are supported.")
+    elif version in ["6.1.2", "6.3.3"]:
+        print(" ")
+        print("================================================")
+        print("This version does not have any bugs listed.")
+        print("================================================")
+        print(" ")
+    elif version not in urls.keys():
+        print(" ")
+        print("================================================")
+        print("The version you entered is not valid. Only versions 6.1.0 and higher are supported.")
+        print("================================================")
+        print(" ")
+    else:
+        versions_list = list(urls.keys())
+        version_index = versions_list.index(version)
+        relevant_versions = versions_list[0:version_index+1]
 
-    #Get the list of relevant versions.
-    versions_list = list(urls.keys())
-    version_index = versions_list.index(version)
-    relevant_versions = versions_list[0:version_index+1]
+        if os.path.exists("cache.txt") == True:
+            file_data = extract.get_cache("cache.txt")
+            for version in relevant_versions:
+                print(" ")
+                print(f"============ BUGs found in Version {version} ============")
+                if version in file_data.keys():
+                    results = transform.get_bugs(file_data, keyword, version)
+                    load.print_found(results)
 
-    #cache file already exists
-    if os.path.exists("cache.txt") == True:
-        file_data = extract.get_cache("cache.txt")
-        for version in relevant_versions:
-            print(" ")
-            print(f"=== BUGs found in Version {version}===")
-            #If version in cache file, search cache and display results.
-            if version in file_data.keys():
-                results = transform.get_bugs(file_data, keyword, version)
-                load.print_found(results)
-            
-            #If version not in cache file, get the bugs, display results, append new version to cache.
-            else:
+                else:
+                    results = extract.get_data(file_data, version)
+                    load.print_found(results)
+            load.write_file(file_data)
+
+        else:
+            file_data = dict()
+            for version in relevant_versions:
+                print(" ")
+                print(f"============ BUGs found in Version {version} ============")
                 results = extract.get_data(file_data, version)
                 load.print_found(results)
-        load.write_file(file_data)
-
-    #if cache file does not exist.
-    else:
-        file_data = dict()
-        for version in relevant_versions:
-            print(" ")
-            print(f"=== BUGs found in Version {version}===")
-            results = extract.get_data(file_data, version)
-            load.print_found(results)
-        load.write_file(file_data)
+            load.write_file(file_data)
