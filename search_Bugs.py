@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # Name: Juan Cabrera
 # Date Created: 05/16/2022
 # Purpose: To search the release notes for known bugs using keywords
