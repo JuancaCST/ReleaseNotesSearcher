@@ -5,8 +5,17 @@ This program searches for known bugs from the FortiSIEM releases notes using key
 Python 3.6 and higher.
 
 ## Installation
-Click on the green "Code" button under this repository to Download ZIP. 
-* The cache.txt is not required but allows for fast offline searches from the start. 
+- Click on the green "Code" button under this repository to Download ZIP. 
+- Or run `git clone https://github.com/JuancaCST/ReleaseNotesSearcher.git` from your terminal
+
+*The cache.txt is not required but allows for fast offline searches from the start*
+
+#### For MacOS
+1. Install python from https://www.python.org/downloads
+2. Add python path to zsh `echo "alias python=/usr/bin/python3" >> ~/.zshrc` (Aditional)
+3. Make sure the file is executable: `chmod +x search_Bugs.py`
+4. Make a link to /usr/local/bin `ln -s ~/ReleaseNotesSearcher/search_Bugs.py search_Bugs.py`
+5. Run in the terminal `search_Bugs.py`, should be working with no issues
 
 ## Usage
 ![image](https://user-images.githubusercontent.com/65786940/169099579-1168737c-72fc-43fa-b4a7-4f9743f772d7.png)
