@@ -9,7 +9,7 @@ Click on the green "Code" button under this repository to Download ZIP.
 * The cache.txt is not required but allows for fast offline searches from the start. 
 
 ## Usage
-![image](https://user-images.githubusercontent.com/65786940/169096886-aefe899e-0d58-4ee0-a045-72ef2fe3420c.png)
+![image](https://user-images.githubusercontent.com/65786940/169097747-0bb6b2bf-f510-4c5b-844c-cc3be12e8fff.png)
 
 # Roadmap
 Future FortiSIEM versions will be supported. Versions 6.1.0 up to 6.5.0 are currently supported.
