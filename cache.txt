@@ -553,6 +553,134 @@
             "Description": "UDP port 6343 needs to be opened on all nodes for ingesting sFlow."
         }
     ],
+    "6.4.1": [
+        {
+            "Bug ID": "774397",
+            "Severity": "Major",
+            "Module": "Data Manager",
+            "Description": "Event files upload to Elasticsearch is slow for Organizations with large org Id."
+        },
+        {
+            "Bug ID": "789843",
+            "Severity": "Major",
+            "Module": "Performance Monitor",
+            "Description": "Fail to get running-config from Cisco IOS devices."
+        },
+        {
+            "Bug ID": "788814",
+            "Severity": "Minor",
+            "Module": "Agent Manager",
+            "Description": "phAgentManager process may crash if Cisco FireAMP event pulling job does not return expected value."
+        },
+        {
+            "Bug ID": "788034",
+            "Severity": "Minor",
+            "Module": "Agent Manager",
+            "Description": "Collector may not efficiently get WMI event log if some of the Windows servers are down."
+        },
+        {
+            "Bug ID": "757413",
+            "Severity": "Minor",
+            "Module": "Agent Manager",
+            "Description": "phAgentManager process may crash to handle some Cisco Firepower IPS events."
+        },
+        {
+            "Bug ID": "795273",
+            "Severity": "Minor",
+            "Module": "Agent Monitor",
+            "Description": "Enabling an AWS Cloudwatch pull event may cause phAgentManager to crash on collector."
+        },
+        {
+            "Bug ID": "801278",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "The LOW and HIGH watermark log delay events (PH_DEV_MON_LOG_DEVICE_DELAY_LOW and PH_DEV_MON_LOG_DEVICE_DELAY_HIGH) are not generated reliably."
+        },
+        {
+            "Bug ID": "794338",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "New Dashboards created in Global Dashboard no longer appear after a couple of hours."
+        },
+        {
+            "Bug ID": "791114",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "ServiceNow Device Outbound Integration may fail if Installed Software Date was NULL."
+        },
+        {
+            "Bug ID": "782304",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "User with a cloned \"Full Admin\" role with Data Conditions defined cannot search for rules in RESOURCES Rules."
+        },
+        {
+            "Bug ID": "776214",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "Searching currently Active Incidents generated many months ago fails in INCIDENTSSearch."
+        },
+        {
+            "Bug ID": "785547",
+            "Severity": "Minor",
+            "Module": "Data",
+            "Description": "The ADMIN Health Cloud Health page sometimes times out after upgrade to 6.4.0, if there are many workers."
+        },
+        {
+            "Bug ID": "779548",
+            "Severity": "Minor",
+            "Module": "Data Purger",
+            "Description": "phDataPurger incorrectly counts master nodes as hot nodes in AWS-managed Elasticsearch."
+        },
+        {
+            "Bug ID": "791321",
+            "Severity": "Minor",
+            "Module": "Data Purger",
+            "Description": "Data Purger needs to handle error 404 when trying to purge non-existent ES indices."
+        },
+        {
+            "Bug ID": "780688",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "Sometimes, the user cannot reset their own password because of internal errors."
+        },
+        {
+            "Bug ID": "776295",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "GUI shows \"Undefined\" error when the user attempts to set a new password for a user created with the \"Password Reset\" field set."
+        },
+        {
+            "Bug ID": "784026",
+            "Severity": "Minor",
+            "Module": "Parser",
+            "Description": "phParser may sometimes crash to handle some events."
+        },
+        {
+            "Bug ID": "776350",
+            "Severity": "Minor",
+            "Module": "Parser",
+            "Description": "External protocol error (PH_PARSER_INVALID_EXT_LOG_PROTO) from collectors occurrs when OMI was configured."
+        },
+        {
+            "Bug ID": "769414",
+            "Severity": "Minor",
+            "Module": "QueryMaster",
+            "Description": "phQueryMaster memory usage increases when FortiSIEM collects performance metrics for a large number of devices when they are all included in the Summary dashboard. This summary data is held in memory and needs to be more aggressively purged."
+        },
+        {
+            "Bug ID": "793805",
+            "Severity": "Enhancement",
+            "Module": "App Server",
+            "Description": "Handling of Task Rest API results in excessive PostGreSQL accesses causing App Server performance issues."
+        },
+        {
+            "Bug ID": "790052",
+            "Severity": "Enhancement",
+            "Module": "Parser",
+            "Description": "Increase the number of concurrent TLS connections handled by Parser module for syslog over TLS."
+        }
+    ],
     "6.4.0": [
         {
             "Bug ID": "749146",
