@@ -278,7 +278,6 @@ while True:
                             load.print_found(results)
                         else:
                             print("No matching bugs found in %s\n" % v)
-
             load.write_file(file_data)
 
         else:       # No cache; build it.
