@@ -17,8 +17,22 @@ Python 3.6 and higher.
 4. Make a link to /usr/local/bin `ln -s ~/ReleaseNotesSearcher/search_Bugs.py search_Bugs.py`
 5. Run in the terminal `search_Bugs.py`, should be working with no issues
 
-## Usage
+# Usage
+### - Interactive Mode (Linux/Unix/Windows)
+
 ![image](https://user-images.githubusercontent.com/65786940/169099579-1168737c-72fc-43fa-b4a7-4f9743f772d7.png)
+
+### - Non-Interactive Mode (Linux/Unix)
+* For linux and unix systems, the python file will need to be converted from dos to unix.
+* Assign correct permissions to make it executable. Run the script as an executable: 
+
+***[root@Supervisor tmp]# dos2unix search_Bugs.py***
+
+***[root@Supervisor tmp]# chmod +x search_Bugs.py***
+
+***[root@Supervisor tmp]# ./search_Bugs.py*** 
+
+![image](https://user-images.githubusercontent.com/65786940/171966268-ea9060ee-676f-4d4e-a02d-4a4168c17082.png)
 
 # Roadmap
 Future FortiSIEM versions will be supported. Versions 6.1.0 up to 6.5.0 are currently supported.
