@@ -35,7 +35,7 @@ Python 3.6 and higher.
 ![image](https://user-images.githubusercontent.com/65786940/171966268-ea9060ee-676f-4d4e-a02d-4a4168c17082.png)
 
 # Roadmap
-Future FortiSIEM versions will be supported. Versions 6.1.0 up to 6.5.0 are currently supported.
+Future FortiSIEM versions will be supported. Versions 6.1.0 up to 6.6.0 are currently supported.
 
 # Known Issues
 If the cache is not present, it has to scrape the data from the release notes for each version included in the current search. Depending on the availability and responsiveness of the docs.fortinet.com domain, this can cause:
