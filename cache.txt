@@ -3750,5 +3750,295 @@
             "Module": "Parser",
             "Description": "O365 Event Type MS_OFFICE365_SecurityComplianceCenter_AlertTriggered is missing details."
         }
+    ],
+    "6.6.0": [
+        {
+            "Bug ID": "822029",
+            "Severity": "Minor",
+            "Module": "Anomaly",
+            "Description": "Exclude network logon events from UEBA AI engine."
+        },
+        {
+            "Bug ID": "824268",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "IPS to CVE validation does not work correctly."
+        },
+        {
+            "Bug ID": "821804",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "Restarting App Server sometimes gives heap error and it is not fixed by re-deploying."
+        },
+        {
+            "Bug ID": "816715",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "Org id in the device maintenance table did NOT get deleted when customer deletes the org."
+        },
+        {
+            "Bug ID": "816492",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "Older open SAML library causes login failure to OKTA authentication portal."
+        },
+        {
+            "Bug ID": "815696",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "When user changes org scope, create this event PH_AUDIT_USER_CHANGE_ORG_SCOPE instead of PH_AUDIT_USER_SUED."
+        },
+        {
+            "Bug ID": "815025",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "Specifying Reporting device group and Event type Group does not work correctly for Event forwarding, Event Dropping and Retention Policy and Org mapping."
+        },
+        {
+            "Bug ID": "813642",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "HTTP Error page reveals App Server name and version."
+        },
+        {
+            "Bug ID": "811630",
+            "Severity": "Minor",
+            "Module": "App Server",
+            "Description": "If you change the priority of a system rule, after FortiSIEM upgrade, the rule's priority is incorrectly reset to its default priority."
+        },
+        {
+            "Bug ID": "821813",
+            "Severity": "Minor",
+            "Module": "Data",
+            "Description": "Time Stamps are not parsed properly for Falcon Data Replicator."
+        },
+        {
+            "Bug ID": "821585",
+            "Severity": "Minor",
+            "Module": "Data",
+            "Description": "SystemShutdown event group has some incorrect event types."
+        },
+        {
+            "Bug ID": "817295",
+            "Severity": "Minor",
+            "Module": "Data",
+            "Description": "WinOSPull parser has incorrect function definition."
+        },
+        {
+            "Bug ID": "814834",
+            "Severity": "Minor",
+            "Module": "Data",
+            "Description": "Update BarracudaCloudGenFW parser format recognizer."
+        },
+        {
+            "Bug ID": "814409",
+            "Severity": "Minor",
+            "Module": "Data",
+            "Description": "Update FortiSIEM Claroty CTD parser."
+        },
+        {
+            "Bug ID": "811907",
+            "Severity": "Minor",
+            "Module": "Data",
+            "Description": "Reduce parser test events down to 10 for ease of cloning and testing."
+        },
+        {
+            "Bug ID": "811224",
+            "Severity": "Minor",
+            "Module": "Discovery",
+            "Description": "AWS credentials are included in aws-phgetflowlogs.php in clear text."
+        },
+        {
+            "Bug ID": "821427",
+            "Severity": "Minor",
+            "Module": "ElasticSearch",
+            "Description": "Add 7 day allowance to write data to Elasticsearch to cover data buffering more than 2 days."
+        },
+        {
+            "Bug ID": "818548",
+            "Severity": "Minor",
+            "Module": "Event Pulling",
+            "Description": "AWS Kinesis fails to sync shards and leases on connection."
+        },
+        {
+            "Bug ID": "817081",
+            "Severity": "Minor",
+            "Module": "Event Pulling",
+            "Description": "AWS Kinesis buffer size are incorrect and causes event pull failure."
+        },
+        {
+            "Bug ID": "821263",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "Ticket Note not saved in Incident Ticket."
+        },
+        {
+            "Bug ID": "820583",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "Show proper error codes returned by FortiSOAR executing playbook or connectors."
+        },
+        {
+            "Bug ID": "814430",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "GUI does not allow dot in user name field."
+        },
+        {
+            "Bug ID": "810866",
+            "Severity": "Minor",
+            "Module": "GUI",
+            "Description": "When you disable a Device in Pull Events with a search filter, a different device in the global list is disabled."
+        },
+        {
+            "Bug ID": "816499",
+            "Severity": "Minor",
+            "Module": "Parser",
+            "Description": "Increase TCP/UDP buffer from 16KB to 24KB to handle large events up to 24KB."
+        },
+        {
+            "Bug ID": "814318",
+            "Severity": "Minor",
+            "Module": "Report",
+            "Description": "For ClickHouse Storage, Incident CSV export does not contain result for incident status and resolution."
+        },
+        {
+            "Bug ID": "809386",
+            "Severity": "Enhancement",
+            "Module": "App Server",
+            "Description": "The events PH_DEV_MON_LOG_DEVICE_DELAY_LOW and PH_DEV_MON_LOG_DEVICE_DELAY_HIGH do not generate reliably."
+        },
+        {
+            "Bug ID": "802322",
+            "Severity": "Enhancement",
+            "Module": "App Server",
+            "Description": "Changing Supervisor IP may lead to two Supervisor entries showing up in Cloud Health."
+        },
+        {
+            "Bug ID": "801605",
+            "Severity": "Enhancement",
+            "Module": "App Server",
+            "Description": "Users who have Read only admin permission on Super Global but have Full Admin on Org, cannot edit credentials in the Org after switching to that Org."
+        },
+        {
+            "Bug ID": "804904",
+            "Severity": "Enhancement",
+            "Module": "App Server,GUI",
+            "Description": "New Dashboard folders may not appear in the drop-down in the dashboard folder section."
+        },
+        {
+            "Bug ID": "810382",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Some generic events from FortiGate need to be further parsed."
+        },
+        {
+            "Bug ID": "809024",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Event Type generated from Windows logs received via Epilog is incorrect and very long."
+        },
+        {
+            "Bug ID": "803091",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Update FortiGate parser to support Bandwidth Delta values."
+        },
+        {
+            "Bug ID": "802247",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Update MSDefender AdvancedHunting parser."
+        },
+        {
+            "Bug ID": "797026",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Update Nginx event parser."
+        },
+        {
+            "Bug ID": "792333",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Update FortiAI parser to handle new log format and relabeling of product to FortiNDR."
+        },
+        {
+            "Bug ID": "779162",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Update Claroty parser to accommodate year timestamp in syslog header and new event."
+        },
+        {
+            "Bug ID": "774819",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Update FortiMail log parser."
+        },
+        {
+            "Bug ID": "684254",
+            "Severity": "Enhancement",
+            "Module": "Data",
+            "Description": "Update Extreme switch log parser."
+        },
+        {
+            "Bug ID": "807886",
+            "Severity": "Enhancement",
+            "Module": "Data Manager",
+            "Description": "A log from Elasticsearch event insert code contains password."
+        },
+        {
+            "Bug ID": "801973",
+            "Severity": "Enhancement",
+            "Module": "Data Manager",
+            "Description": "Online data is not removed when defining online retention policies for all events."
+        },
+        {
+            "Bug ID": "807102",
+            "Severity": "Enhancement",
+            "Module": "Discovery",
+            "Description": "SNMP V3 Trap support causes Auth Password and Priv Password directly in snmptrapd.conf on Collectors."
+        },
+        {
+            "Bug ID": "796086",
+            "Severity": "Enhancement",
+            "Module": "Discovery",
+            "Description": "Support more HP switches for discovery, performance and availability metrics via SNMP."
+        },
+        {
+            "Bug ID": "775692",
+            "Severity": "Enhancement",
+            "Module": "Discovery",
+            "Description": "Test connectivity results sometimes display Windows OMI text password in GUI."
+        },
+        {
+            "Bug ID": "644096",
+            "Severity": "Enhancement",
+            "Module": "Discovery, Perf Monitoring",
+            "Description": "Enable AES256 and SHA256 for SNMP V3."
+        },
+        {
+            "Bug ID": "809387",
+            "Severity": "Enhancement",
+            "Module": "ElasticSearch",
+            "Description": "Limit the number of dynamically allocated shards."
+        },
+        {
+            "Bug ID": "795638",
+            "Severity": "Enhancement",
+            "Module": "Event Pulling",
+            "Description": "Sophos logs via API are polled very frequently; thereby quickly reaching API limit."
+        },
+        {
+            "Bug ID": "810548",
+            "Severity": "Enhancement",
+            "Module": "GUI",
+            "Description": "System notifications are unreadable and overlaps with page information."
+        },
+        {
+            "Bug ID": "783383",
+            "Severity": "Enhancement",
+            "Module": "Rule",
+            "Description": "Suppress excessive PH_REPORT_PACK_FAILED events."
+        }
     ]
 }

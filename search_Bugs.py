@@ -14,6 +14,7 @@ OUR_VERSION="1.1"
 # Note: for proper semantics, the entries in urls should be in descending "numeric" order by key.
 #
 urls = {
+    "6.6.0" : "https://docs.fortinet.com/document/fortisiem/6.6.0/release-notes/709914/whats-new-in-6-6-0",
     "6.5.0" : "https://docs.fortinet.com/document/fortisiem/6.5.0/release-notes/482665/whats-new-in-6-5-0",
     "6.4.1" : "https://docs.fortinet.com/document/fortisiem/6.4.1/release-notes/516901/whats-new-in-6-4-1",
     "6.4.0" : "https://docs.fortinet.com/document/fortisiem/6.4.0/release-notes/456886/whats-new-in-6-4-0",
