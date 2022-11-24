@@ -267,7 +267,7 @@ while True:
                     if v in file_data.keys():
                         results = transform.get_bugs(file_data, keyword, v)
                         if results is not None and 0 != len(results):
-                            print(f"============ BUGs found in Version {v} ============")
+                            print(f"============ Fixed BUGs fixes found in Version {v} ============")
                             load.print_found(results)
                         else:
                             print("No matching bugs found in %s\n" %v)
@@ -275,7 +275,7 @@ while True:
                     else:
                         results = extract.get_data(file_data, v)
                         if results is not None and 0 != len(results):
-                            print(f"============ BUGs found in Version {v} ============")
+                            print(f"============ Fixed BUGs found in Version {v} ============")
                             load.print_found(results)
                         else:
                             print("No matching bugs found in %s\n" % v)
@@ -291,7 +291,7 @@ while True:
                 else:
                     results = extract.get_data(file_data, v)
                     if results is not None and 0 != len(results):
-                        print(f"============ BUGs found in Version {v} ============")
+                        print(f"============ Fixed BUGs found in Version {v} ============")
                         load.print_found(results)
                     else:
                         print("No matching bugs found in %s\n" %v)
